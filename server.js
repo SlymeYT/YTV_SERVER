@@ -7,7 +7,7 @@ const { response } = require('express');
 
 app.use('/', function(clientRequest, clientResponse) {
     var url;
-    url = 'https://www.google.com'
+    url = 'https://www.openallurls.com'
     var parsedHost = url.split('/').splice(2).splice(0, 1).join('/')
     var parsedPort;
     var parsedSSL;
