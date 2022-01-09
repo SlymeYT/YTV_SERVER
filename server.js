@@ -7,7 +7,7 @@ const { response } = require('express');
 
 app.use('/', function(clientRequest, clientResponse) {
     var url;
-    url = 'https://www.google.com'
+    url = 'https://www.youtube.com/tv#'
     var parsedHost = url.split('/').splice(2).splice(0, 1).join('/')
     var parsedPort;
     var parsedSSL;
@@ -24,7 +24,7 @@ app.use('/', function(clientRequest, clientResponse) {
       path: clientRequest.url,
       method: clientRequest.method,
       headers: {
-        'User-Agent': clientRequest.headers['user-agent']
+        'User-Agent': 'Mozilla/5.0 (SmartHub; SMART-TV; U; Linux/SmartTV) AppleWebKit/531.2+ (KHTML, Like Gecko) WebBrowser/1.0 SmartTV Safari/531.2+'
       }
     };  
   
@@ -56,4 +56,4 @@ app.use('/', function(clientRequest, clientResponse) {
 
 
   app.listen(3000)
-  console.log('Running on 0.0.0.0:3000')
+  console.log('Running on localhost:3000')
